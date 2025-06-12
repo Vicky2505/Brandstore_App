@@ -1,16 +1,30 @@
-# brandstore
+# 🛍️ Brand Store App – Fashion Shopping
 
-A new Flutter project.
+A **Flutter-powered** fashion shopping app with sleek, modern UI and smooth navigation. Designed with showcases an elegant user journey.
 
-## Getting Started
+## 🚀 Features:  
+- 👗 **Beautiful Onboarding & Category UI**  
+- 🔍 **Explore Page with Filtering by Gender**  
+- 📄 **Product Detail with Size Selection**  
+- 🛒 **Cart & Order Summary Screens**  
+- 💳 **Modern Checkout Page with Payment Options**  
+- 📱 **Fully Responsive UI (Mobile)**  
 
-This project is a starting point for a Flutter application.
+## 📷 App Preview:  
+![Brand Store App Preview](https://github.com/Vicky2505/Brandstore_App/blob/main/images/app_preview.png)  
 
-A few resources to get you started if this is your first Flutter project:
+## 📥 Installation & Setup  
+Follow these steps to run the app:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```sh
+# Clone the repository
+git clone https://github.com/Vicky2505/Brandstore_App.git 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Navigate to the project directory
+cd brandstore  
+
+# Install dependencies
+flutter pub get  
+
+# Run the app
+flutter run  
