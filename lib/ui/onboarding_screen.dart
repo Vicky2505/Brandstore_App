@@ -1,3 +1,4 @@
+import 'package:brandstore/ui/bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/custom_button.dart';
@@ -57,7 +58,12 @@ class OnboardingScreen extends StatelessWidget {
               child: CustomButton(
                 text: 'Get Start',
                 onTap: () {
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const BottomNavBar(),
+                    ),
+                  );
                 },
               ),
             ),
