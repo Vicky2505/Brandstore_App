@@ -33,7 +33,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: Container(
-        height: 85.h,
+        height: 80.h,
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -45,29 +45,49 @@ class _BottomNavBarState extends State<BottomNavBar> {
             ),
           ],
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            _buildNavItem(Icons.home_outlined, 'Home', 0),
-            _buildNavItem(Icons.search, 'Search', 1),
-            _buildNavItemWithBadge(Icons.shopping_bag_outlined, 'Cart', 2),
-            _buildNavItem(Icons.settings_outlined, 'Settings', 3),
-          ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.h),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _buildNavItem(
+                'images/bottom_nav_assets/home_icon.png',
+                'Home',
+                0,
+              ),
+              _buildNavItem(
+                'images/bottom_nav_assets/search_icon.png',
+                'Search',
+                1,
+              ),
+              _buildNavItemWithBadge(
+                'images/bottom_nav_assets/cart _icon.png',
+                'Cart',
+                2,
+              ),
+              _buildNavItem(
+                'images/bottom_nav_assets/settings_icon.png',
+                'Settings',
+                3,
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildNavItem(IconData icon, String label, int index) {
+  Widget _buildNavItem(String iconPath, String label, int index) {
     final bool isActive = _selectedIndex == index;
     return GestureDetector(
       onTap: () => _onItemTapped(index),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
-            icon,
-            size: 26.sp,
+          Image.asset(
+            iconPath,
+            width: 26.w,
+            height: 26.w,
             color: isActive ? Colors.orange : Colors.black,
           ),
           SizedBox(height: 4.h),
@@ -84,7 +104,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     );
   }
 
-  Widget _buildNavItemWithBadge(IconData icon, String label, int index) {
+  Widget _buildNavItemWithBadge(String iconPath, String label, int index) {
     final bool isActive = _selectedIndex == index;
     return GestureDetector(
       onTap: () => _onItemTapped(index),
@@ -93,9 +113,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
         children: [
           Stack(
             children: [
-              Icon(
-                icon,
-                size: 26.sp,
+              Image.asset(
+                iconPath,
+                width: 26.w,
+                height: 26.w,
                 color: isActive ? Colors.orange : Colors.black,
               ),
               if (!isActive)
@@ -104,7 +125,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                   right: 0,
                   child: Container(
                     width: 8.w,
-                    height: 8.h,
+                    height: 8.w,
                     decoration: const BoxDecoration(
                       color: Colors.red,
                       shape: BoxShape.circle,

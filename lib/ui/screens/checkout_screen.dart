@@ -11,12 +11,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: const Center(
-        child: Text('Welcome to the Checkout Screen'),
-      ),
+      body: const Center(child: Text('Welcome to the Checkout Screen')),
     );
   }
 }
