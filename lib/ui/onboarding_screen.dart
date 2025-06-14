@@ -34,7 +34,7 @@ class OnboardingScreen extends StatelessWidget {
                 'Find The\nBest Collections',
                 style: TextStyle(
                   fontSize: 44.sp,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.bold,
                   color: Colors.black,
                   height: 1.2,
                 ),
@@ -46,15 +46,15 @@ class OnboardingScreen extends StatelessWidget {
               child: Text(
                 'Get your dream item easily with FashionHub\nand get other intersting offer',
                 style: TextStyle(
-                  fontSize: 16.sp,
-                  color: Colors.grey[600],
+                  fontSize: 15.sp,
+                  color: Color(0xFF797780),
                   height: 1.5,
                 ),
               ),
             ),
             const Spacer(),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 29.h),
+              padding: EdgeInsets.symmetric(horizontal: 42.w, vertical: 32.h),
               child: CustomButton(
                 text: 'Get Start',
                 onTap: () {

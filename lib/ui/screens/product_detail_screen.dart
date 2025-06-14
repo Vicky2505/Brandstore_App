@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ProductDetailScreen extends StatefulWidget {
-  const ProductDetailScreen({super.key});
+  const ProductDetailScreen({
+    super.key,
+    required String image,
+    required String price,
+    required String name,
+  });
 
   @override
   State<ProductDetailScreen> createState() => _ProductDetailScreenState();
