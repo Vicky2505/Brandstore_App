@@ -77,6 +77,10 @@ flutter:
     #icons 
     - images/home_assets/menu_icon.png
     - images/home_assets/profile_icon.png
+  # Product details screen images
+    - images/detail_assets/design1.png
+    - images/detail_assets/design2.png
+    - images/detail_assets/design3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
