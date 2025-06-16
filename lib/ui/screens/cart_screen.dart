@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -175,12 +176,77 @@ class CartScreen extends StatelessWidget {
                     height: 55.h,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFFF7A00),
+                        backgroundColor: const Color(0xFFFF7A00),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25.r),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.r),
+                              ),
+                              contentPadding: EdgeInsets.all(20.w),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  SizedBox(
+                                    height: 120.h,
+                                    child: Lottie.asset('images/cart_assets/success.json'),
+                                  ),
+                                  SizedBox(height: 10.h),
+                                  Text(
+                                    'Order Confirmed!',
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  SizedBox(height: 8.h),
+                                  Text(
+                                    'Thank you for your purchase.\nYour order will be processed shortly.',
+                                    style: TextStyle(
+                                      fontSize: 14.sp,
+                                      color: Colors.black87,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  SizedBox(height: 16.h),
+                                  ElevatedButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: const Color(0xFFFF7A00),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                          12.r,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 16.w,
+                                      ),
+                                      child: Text(
+                                        'OK',
+                                        style: TextStyle(
+                                          fontSize: 14.sp,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        );
+                      },
                       child: Text(
                         'Checkout Now',
                         style: TextStyle(
