@@ -3,8 +3,7 @@
 A **Flutter-powered** fashion shopping app with sleek, modern UI and smooth navigation. Designed with showcases an elegant user journey.
 
 ## 🚀 Features:  
-- 👗 **Beautiful Onboarding & Category UI**  
-- 🔍 **Explore Page with Filtering by Gender**  
+- 👗 **Beautiful Onboarding & Category UI**   
 - 📄 **Product Detail with Size Selection**  
 - 🛒 **Cart & Order Summary Screens**  
 - 💳 **Modern Checkout Page with Payment Options**  
